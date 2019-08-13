@@ -1,0 +1,3 @@
+- Allow user login (sessions)
+- /signin and /login page
+- Create user class and cookie class in db and model
