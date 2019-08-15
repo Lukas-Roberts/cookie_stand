@@ -2,7 +2,7 @@ class CookiesController < ApplicationController
 
 
     get '/cookies' do
-        erb :'cookies/indexn '
+        erb :'cookies/index'
     end
 
 
