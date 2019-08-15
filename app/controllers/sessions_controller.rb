@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
     get '/login' do
+        @failed = false
         erb :'sessions/login'
     end
 
@@ -8,8 +9,9 @@ class SessionsController < ApplicationController
         user = User.find_by(username: params(:username))
         if !!user && user.authenticate(params[:password])
             session[:user_id] = user.id
-            redirect :'cookies/index'
+            redirect :'/cookies'
         else
+            @failed = true
             erb :'sessions/login'
         end
     end
