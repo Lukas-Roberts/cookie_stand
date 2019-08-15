@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_13_220924) do
+ActiveRecord::Schema.define(version: 2019_08_15_203116) do
+
+  create_table "cookies", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
