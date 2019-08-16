@@ -1,0 +1,6 @@
+<h3><%= "Hello #{user.name}!" %></h3>
+<h4>These are all the different cookies submitted from all of the users.</h4>
+<h4><%= "Would you like to add a new cookie, edit a cookie, or delete a cookie" %></h4>
+<% @cookies.each do |cookie| %>
+    <%= erb :'cookies/_cookie', locals:{user: cookie.user, cookie: cookie} %>
+<% end %>
