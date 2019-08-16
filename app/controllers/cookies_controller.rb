@@ -8,11 +8,11 @@ class CookiesController < ApplicationController
     end
 
     get '/cookies/new' do
-
+        erb :'cookies/new'
     end
 
     post '/cookies' do
-
+        
     end
 
     get '/cookies/:id' do
