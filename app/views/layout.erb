@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <h1>Virtual Cookie Stand</h1><br/>
+    <h1 align="center">Virtual Cookie Stand</h1>
     <% if logged_in? %>
-        <h3><%= "Welcome #{current_user.name}!" %></h3>
+        <h2 align="center"><%= "Hello #{current_user.name}!" %></h2>
     <% end %>
     <%= yield %>
 </body>

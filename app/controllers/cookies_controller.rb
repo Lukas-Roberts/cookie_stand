@@ -1,6 +1,5 @@
 class CookiesController < ApplicationController
 
-
     get '/cookies' do
         authenticate
         @cookies = Cookie.all
@@ -29,8 +28,8 @@ class CookiesController < ApplicationController
 
     patch '/cookies/:id' do
         @cookie = Cookie.find_by_id(params[:id])
-        @cookie.name = params[:]
-        @cookie.type = params[:]
+        #@cookie.name = params[:]
+       # @cookie.type = params[:]
         @cookie.save
         redirect :'/cookies'
     end
