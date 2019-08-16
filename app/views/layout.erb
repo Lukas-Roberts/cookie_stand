@@ -8,8 +8,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <h1>Virtual Cookie Stand</h1>
-    
+    <h1>Virtual Cookie Stand</h1><br/>
+    <% if logged_in? %>
+        <h3><%= "Welcome #{current_user.name}!" %></h3>
+    <% end %>
     <%= yield %>
 </body>
 </html>
