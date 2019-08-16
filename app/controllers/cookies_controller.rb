@@ -11,9 +11,9 @@ class CookiesController < ApplicationController
     end
 
     post '/cookies' do
-        cookie = Cookie.new(name: params[:cookie_name], type: params[:cookie_type], user_id: current_user.id)
+        cookie = Cookie.new(name: params[:cookie_name], cookie_type: params[:cookie_type], user_id: current_user.id)
         cookie.save
-        redirect :'cookies/index'
+        redirect 'cookies/index'
     end
 
     get '/cookies/:id' do
@@ -31,7 +31,7 @@ class CookiesController < ApplicationController
         #@cookie.name = params[:]
        # @cookie.type = params[:]
         @cookie.save
-        redirect :'/cookies'
+        redirect '/cookies'
     end
 
     delete '/cookies/:id/delete' do

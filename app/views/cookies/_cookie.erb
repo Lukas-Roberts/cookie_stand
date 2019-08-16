@@ -1,13 +1,15 @@
 <div class="table">
     <div class="table-row">
         <div class="table-cell">
+            <% id = cookie.user_id %>
+            <% user = user.find_by(id: id) %>
             <%= user.name %>
         </div>
         <div class="table-cell">
             <%= cookie.name %>
         </div>
         <div class="table-cell">
-            <%= cookie.type %>
+            <%= cookie.cookie_type %>
         </div>
     </div>
 </div>

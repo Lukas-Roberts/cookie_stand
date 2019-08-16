@@ -1,6 +1,8 @@
 <h4>These are all the different cookies submitted from all of the users.</h4>
-<h4><%= "Would you like to add a new cookie, edit a cookie, or delete a cookie" %></h4>
+<h4>If you would like to add a new cookie, please select the 'Add a new cookie' button at the bottom of the page</h4>
+<h4>To edit or delete one of your cookies, please visit the 'My Cookies' page!</h4>
 <% @cookies.each do |cookie| %>
-    <%= erb :'cookies/_cookie', locals:{user: cookie.user, cookie: cookie} %>
+    <%= erb :'cookies/_cookie', locals:{id: cookie.user_id, cookie: cookie} %>
 <% end %>
+
 <a href="/logout">Logout</a>

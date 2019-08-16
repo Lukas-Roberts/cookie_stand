@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_203116) do
 
   create_table "cookies", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "cookie_type"
     t.integer "user_id"
   end
 
