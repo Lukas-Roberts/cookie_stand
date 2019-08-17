@@ -13,11 +13,12 @@ class CookiesController < ApplicationController
     post '/cookies' do
         cookie = Cookie.new(name: params[:cookie_name], cookie_type: params[:cookie_type], user_id: current_user.id)
         cookie.save
-        redirect 'cookies/index'
+        redirect '/cookies'
     end
 
     get '/cookies/:id' do
         @cookie = Cookie.find_by_id(params[:id])
+        binding.pry
         erb :'cookies/show'
     end
 

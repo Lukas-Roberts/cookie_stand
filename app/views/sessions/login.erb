@@ -1,11 +1,11 @@
-<form action="/login" method="post">
+<form action="/login" method="post" class="form">
 
     <% if @failed %>
-    <p class="danger">Uh-oh! Your Username or Password is incorrect... Please try again!</p>
+    <p class="danger">Uh-oh! Your Username or Password is incorrect.</p>
+    <p class="danger">Please try again!</p>
     <% end %>
 
-    <input type="text" name="username" id="username" placeholder="Username"/><br/>
-    <input type="text" name="password" id="password" placeholder="Password"/><br/>
-    <input type="submit" value="Login">
-
+    <p><input type="text" name="username" id="username" placeholder="Username"><br/></p>
+    <p><input type="password" name="password" id="password" placeholder="Password"><br/></p>
+    <p><input type="submit" value="Login" class="button"></p>
 </form>
