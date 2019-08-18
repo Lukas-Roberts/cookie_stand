@@ -1,9 +1,9 @@
-html{
+html {
     background-color: #fffff0;
 }
 
-.center{
-    text-align: center;
+.right {
+  float: right;
 }
 
 /*a.button, a:visited{
@@ -18,7 +18,7 @@ html{
     border-right: 3px solid darkgray;
 }*/
 
-.danger{
+.danger {
     color: red;
 }
 
@@ -45,16 +45,18 @@ html{
 /*html,body{
     height:100%;
   }*/
-  body{
-    text-align:center;
+  body {
+    text-align:center;    
   }
-  body:before{
+
+  body:before {
     content:'';
     height:100%;
     display:inline-block;
     vertical-align:middle;
   }
-  .button{
+
+  .button {
     background:#1AAB8A;
     color:#fff;
     border:none;
@@ -66,11 +68,13 @@ html{
     transition:800ms ease all;
     outline:none;
   }
-  .button:hover{
+
+  .button:hover {
     background:#fff;
     color:#1AAB8A;
   }
-  .button:before, .button:after{
+
+  .button:before, .button:after {
     content:'';
     position:absolute;
     top:0;
@@ -80,13 +84,15 @@ html{
     background: #1AAB8A;
     transition:400ms ease all;
   }
-  .button:after{
+
+  .button:after {
     right:inherit;
     top:inherit;
     left:0;
     bottom:0;
   }
-  .button:hover:before, .button:hover:after{
+
+  .button:hover:before, .button:hover:after {
     width:100%;
     transition:800ms ease all;
   }

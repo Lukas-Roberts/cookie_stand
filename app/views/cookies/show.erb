@@ -1,6 +1,18 @@
 <% if @cookie.user_id == current_user.id %>
     <form action="/cookies/<%= @cookie.id %>/delete" method="post">
         <input id="hidden" type="hidden" name="_method" value="delete">
-        <input type="submit" value="delete">
+        
+        <p><div class="table">
+            <div class="table-row">
+                <div class="table-cell">
+                    <%= @cookie.name %>
+                </div>
+                <div class="table-cell">
+                    <%= @cookie.cookie_type %>
+                </div>
+            </div>
+        </div></p>
+
+        <input type="submit" value="Delete" class="button">
     </form>
 <% end %>

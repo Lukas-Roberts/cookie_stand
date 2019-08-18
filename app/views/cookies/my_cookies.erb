@@ -1,0 +1,6 @@
+
+<% @cookies.each do |cookie| %>
+    <%= erb :'cookies/_my_cookies', locals:{id: cookie.user_id, cookie: cookie} %>
+    <a href="/cookies/<%= cookie.id %>/edit" class="button">Edit</a>
+    <a href="/cookies/<%= cookie.id %>" class="button">Delete</a><br/><br/>
+<% end %>

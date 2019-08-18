@@ -1,12 +1,12 @@
 <h4>Edit your cookie below!</h4>
-<form action="/cookies" method="post">
+<form action="/cookies/<%= @cookie.id %>" method="post">
+<input type="hidden" id="hidden" name="_method" value="patch">
+    <p><label for="cookie_name">Cookie's Name:</label>
+    <input type="text" name="cookie_name" id="cookie_name" value="<%= @cookie.name %>"></p>
 
-    <label for="cookie_name">Cookie's Name:</label>
-    <input type="text" name="cookie_name" id="cookie_name" value="#{@cookie.name}"><br/>
+    <p><label for="cookie_type">Type of Cookie:</label>
+    <input type="text" name="cookie_type" id="cookie_type" value="<%= @cookie.cookie_type %>"></p>
 
-    <label for="cookie_type">Type of Cookie:</label>
-    <input type="text" name="cookie_type" id="cookie_type" value="@cookie.type"><br/>
-
-    <input type="submit" value="Save Cookie!">
+    <p><input type="submit" value="Save Cookie!" class="button"></p>
 
 </form>

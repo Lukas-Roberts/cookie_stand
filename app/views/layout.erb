@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+
+
+    </head>
 <body>
-    <h1 class="center">Virtual Cookie Stand</h1>
+    <h1>Virtual Cookie Stand</h1>
     <% if logged_in? %>
-        <h2 class="center"><%= "Hello #{current_user.name}!" %></h2>
+        <h2><%= "Hello #{current_user.name}!" %></h2>
     <% end %>
     <%= yield %><br/><br/>
     <% if logged_in? %>

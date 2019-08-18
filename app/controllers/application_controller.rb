@@ -31,6 +31,11 @@ class ApplicationController < Sinatra::Base
             end
         end
     
+        def authorize(cookie)
+           if cookie.user != current_user
+                redirect '/cookies'
+           end
+        end
 
     end
 
