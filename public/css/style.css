@@ -6,17 +6,10 @@ html {
   float: right;
 }
 
-/*a.button, a:visited{
-    text-align: center;
-    text-decoration-color: black;
-    text-decoration: none;
-    background-color: silver;
-    padding: 7px 14px;
-    border-top: 2px solid lightgray;
-    border-left: 2px solid lightgray;
-    border-bottom: 3px solid darkgray;
-    border-right: 3px solid darkgray;
-}*/
+a.plain, a.plain:visited {
+  text-decoration: none;
+  color: #1AAB8A;
+}
 
 .danger {
     color: red;
@@ -41,10 +34,6 @@ html {
     background: lightblue;
 }
 
-
-/*html,body{
-    height:100%;
-  }*/
   body {
     text-align:center;    
   }

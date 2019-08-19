@@ -1,3 +1,6 @@
+<% if logged_in? %>
+    <p><a href="/cookies" class="button">Home</a></p>
+<% end %>
 
 <% @cookies.each do |cookie| %>
     <%= erb :'cookies/_my_cookies', locals:{id: cookie.user_id, cookie: cookie} %>

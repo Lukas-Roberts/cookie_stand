@@ -1,6 +1,11 @@
+<% if logged_in? %>
+    <a href="/cookies" class="button">Home</a>
+<% end %>
+
 <% if @cookie.user_id == current_user.id %>
+    
     <form action="/cookies/<%= @cookie.id %>/delete" method="post">
-        <input id="hidden" type="hidden" name="_method" value="delete">
+    <input id="hidden" type="hidden" name="_method" value="delete">
         
         <p><div class="table">
             <div class="table-row">
@@ -14,5 +19,8 @@
         </div></p>
 
         <input type="submit" value="Delete" class="button">
+
     </form>
+
 <% end %>
+

@@ -48,5 +48,4 @@ class CookiesController < ApplicationController
         redirect '/cookies'
     end
 
-
 end
