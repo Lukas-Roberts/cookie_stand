@@ -3,7 +3,6 @@
 <% end %>
 
 <% if @cookie.user_id == current_user.id %>
-    
     <form action="/cookies/<%= @cookie.id %>/delete" method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
         
@@ -23,4 +22,3 @@
     </form>
 
 <% end %>
-
