@@ -7,6 +7,7 @@ class CookiesController < ApplicationController
     end
 
     get '/cookies/new' do
+        authenticate
         erb :'cookies/new'
     end
 
@@ -16,17 +17,20 @@ class CookiesController < ApplicationController
     end
 
     get '/cookies/my_cookies' do
+        authenticate
         @cookies = current_user.cookies
         erb :'cookies/my_cookies'
     end
 
     get '/cookies/:id' do
+        authenticate
         @cookie = Cookie.find_by_id(params[:id])
         authorize(@cookie)
         erb :'cookies/show'
     end
 
     get '/cookies/:id/edit' do
+        authenticate
         @cookie = Cookie.find_by_id(params[:id])
         authorize(@cookie)
         erb :'cookies/edit'
